@@ -18,7 +18,7 @@ df_cargo_sal = pd.read_csv('planilha_cargo_salario.csv')
 df_mesclado = pd.merge(df_filtrado, df_cargo_sal, on='cargo', how='left')
 
 # Filtrando e renomeando colunas da tabela definitiva
-filtrando_definitivo = ['colaborador', 'salário', 'dias_trab', 'salario_fami', 'banco']
+filtrando_definitivo = ['colaborador', 'salario', 'dias_trab', 'salario_fami', 'banco']
 df_final = df_mesclado[filtrando_definitivo]
 df_final.rename(columns={'salário': 'cargo_salario'}, inplace=True)
 
